@@ -1,0 +1,19 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /local/www;
+
+	index index.html;
+
+	server_name _;
+
+	location / {
+		try_files $uri /index.html;
+	}
+
+	location /api.php {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+	}
+}

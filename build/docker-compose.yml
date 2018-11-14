@@ -1,0 +1,23 @@
+version: '3.5'
+services:
+  web:
+    container_name: gitphp
+    build: .
+    image: gitphp
+    ports:
+      - '8000:80'
+      - '8001:22'
+    volumes:
+      - "../:/local"
+    networks:
+      - gitphp
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: '1'
+    networks:
+      - gitphp
+networks:
+  gitphp:
+    name: gitphp

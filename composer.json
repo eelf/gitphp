@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Gitphp\\": "classes"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/eelf/lib.git"
+        }
+    ],
+    "require-dev": {
+        "lib": "dev-master"
+    }
+}

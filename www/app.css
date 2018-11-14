@@ -1,0 +1,28 @@
+
+.link {
+    cursor: pointer;
+    color: royalblue;
+}
+
+.green {
+    background: lightgreen;
+}
+
+.red {
+    background: lightcoral;
+}
+
+.gray {
+    background: lightblue;
+}
+
+.diff {
+    font: 14px "Andale Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+    white-space: pre;
+    max-width: 2000px;
+    overflow: hidden;
+}
+
+.diff tr td:nth-child(1), .diff tr td:nth-child(2) {
+    width: 2em;
+}
